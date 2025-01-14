@@ -1,6 +1,6 @@
 # Halltec Certificación API
 
-Este proyecto utiliza **FastAPI** para proporcionar una API para la certificación de Halltec.
+Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para proporcionar una API que consume a API-FACTUS para la certificación de Halltec.
 
 ## Requisitos
 - Python 3.9+
