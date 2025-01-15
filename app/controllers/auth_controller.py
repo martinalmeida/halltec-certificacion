@@ -10,7 +10,7 @@ class AuthController:
 
     async def send_auth_token(self):
         try:
-            auth_url = os.getenv("AUTH_URL")
+            auth_url = os.getenv("APP_URL") + "oauth/token"
             payload = {
                 "grant_type": "password",
                 "client_id": os.getenv("CLIENT_ID"),
