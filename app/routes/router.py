@@ -3,6 +3,7 @@ from app.controllers.auth_controller import AuthController
 from app.controllers.range_controller import RangeController
 from app.controllers.municipality_controller import MunicipalityController
 from app.controllers.tribute_controller import TributeController
+from app.controllers.unit_measurement_controller import UnitMeasurementController
 
 class Router:
 
@@ -12,6 +13,7 @@ class Router:
         self.range_controller = RangeController()
         self.municipality_controller = MunicipalityController()
         self.tribute_controller = TributeController()
+        self.unit_measurement_controller = UnitMeasurementController()
         self._register_routes()
     
     def _register_routes(self):
@@ -31,5 +33,9 @@ class Router:
         @self.router.get("/get-tribute")
         async def get_tribute(authorization: str = Header(...)):
             return await self.tribute_controller.send_get_tribute(authorization)
+        
+        @self.router.get("/get-measures")
+        async def get_measures(authorization: str = Header(...)):
+            return await self.unit_measurement_controller.send_get_measures(authorization)
 
 router = Router().router

@@ -31,3 +31,5 @@ Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para
 3. De la misma forma anterior al end-poin GET **http://127.0.0.1:8000/get-municipality** para obtener los municipios dentro de Factus.
 
 4. Igualmente al end-poin GET **http://127.0.0.1:8000/get-tribute** para obtener los productos tributarios dentro de Factus.
+
+5. De nuevo al end-poin GET **http://127.0.0.1:8000/get-measures** para obtener las unidades de medidas dentro de Factus.
