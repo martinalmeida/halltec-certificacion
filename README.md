@@ -1,3 +1,5 @@
+![Github Banner](https://media1.giphy.com/media/h6rSTGtHbULzOBirkc/giphy.gif?cid=6c09b952wt3n3yufcs3ssq91iuz91dcohmdkduumkgrsxukc&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s)
+
 # Halltec Certificación API
 
 Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para proporcionar una API que consume a API-FACTUS para la certificación de Halltec.
