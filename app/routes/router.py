@@ -2,6 +2,7 @@ from fastapi import APIRouter, Header
 from app.controllers.auth_controller import AuthController
 from app.controllers.range_controller import RangeController
 from app.controllers.municipality_controller import MunicipalityController
+from app.controllers.tribute_controller import TributeController
 
 class Router:
 
@@ -10,6 +11,7 @@ class Router:
         self.auth_controller = AuthController()
         self.range_controller = RangeController()
         self.municipality_controller = MunicipalityController()
+        self.tribute_controller = TributeController()
         self._register_routes()
     
     def _register_routes(self):
@@ -25,5 +27,9 @@ class Router:
         @self.router.get("/get-municipality")
         async def get_municipality(authorization: str = Header(...)):
             return await self.municipality_controller.send_get_municipality(authorization)
+
+        @self.router.get("/get-tribute")
+        async def get_tribute(authorization: str = Header(...)):
+            return await self.tribute_controller.send_get_tribute(authorization)
 
 router = Router().router

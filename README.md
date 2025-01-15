@@ -28,4 +28,6 @@ Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para
 
 2. Pasamos el token en los headers al end-poin GET **http://127.0.0.1:8000/get-range** para obtener los rangos de usuarios configurados dentro de Factus.
 
-2. De la misma forma anterior al end-poin GET **http://127.0.0.1:8000/get-municipality** para obtener los municipios dentro de Factus.
+3. De la misma forma anterior al end-poin GET **http://127.0.0.1:8000/get-municipality** para obtener los municipios dentro de Factus.
+
+4. Igualmente al end-poin GET **http://127.0.0.1:8000/get-tribute** para obtener los productos tributarios dentro de Factus.
