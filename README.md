@@ -22,3 +22,6 @@ Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para
     ```bash
     uvicorn app.main:app --reload
     ```
+
+## Uso
+1. En **Postman** consume al end-point GET **http://127.0.0.1:8000/get-token** para obtener el token de autenticación.
