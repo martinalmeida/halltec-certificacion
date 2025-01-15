@@ -33,3 +33,5 @@ Este proyecto utiliza **FastAPI** configurado en un **Virtual Environment** para
 4. Igualmente al end-poin GET **http://127.0.0.1:8000/get-tribute** para obtener los productos tributarios dentro de Factus.
 
 5. De nuevo al end-poin GET **http://127.0.0.1:8000/get-measures** para obtener las unidades de medidas dentro de Factus.
+
+6. Con el token en los headers, en el end-poin POST **http://127.0.0.1:8000/create-invoice** procedemos a crear la factura dentro de Factus.

@@ -4,6 +4,8 @@ from app.controllers.range_controller import RangeController
 from app.controllers.municipality_controller import MunicipalityController
 from app.controllers.tribute_controller import TributeController
 from app.controllers.unit_measurement_controller import UnitMeasurementController
+from app.controllers.invoice_controller import InvoiceController
+from app.schemas.invoice_schema import InvoiceSchema
 
 class Router:
 
@@ -14,6 +16,7 @@ class Router:
         self.municipality_controller = MunicipalityController()
         self.tribute_controller = TributeController()
         self.unit_measurement_controller = UnitMeasurementController()
+        self.invoice_controller = InvoiceController()
         self._register_routes()
     
     def _register_routes(self):
@@ -37,5 +40,9 @@ class Router:
         @self.router.get("/get-measures")
         async def get_measures(authorization: str = Header(...)):
             return await self.unit_measurement_controller.send_get_measures(authorization)
+        
+        @self.router.post("/create-invoice")
+        async def create_invoice(invoice: InvoiceSchema, authorization: str = Header(...)):
+            return await self.invoice_controller.send_create_invoice(invoice.model_dump(), authorization)
 
 router = Router().router
